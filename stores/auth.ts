@@ -54,7 +54,7 @@ export const useAuthStore = defineStore('auth', {
       }
     },
 
-    checkAuth() {
+checkAuth() {
   const storedUser = localStorage.getItem('user')
   const isAuth = localStorage.getItem('isAuthenticated')
 
@@ -65,7 +65,7 @@ export const useAuthStore = defineStore('auth', {
     this.user = null
     this.isAuthenticated = false
   }
-}
+}, 
 
     logout() {
       this.clearUser()
