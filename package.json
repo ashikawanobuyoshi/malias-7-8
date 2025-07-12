@@ -7,8 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
+    "postinstall": "nuxt prepare",
+    "start": "nuxt start",
+  }
   "dependencies": {
     "@aws-sdk/client-s3": "^3.842.0",
     "@aws-sdk/lib-storage": "^3.842.0",
