@@ -2,17 +2,16 @@
 import { defineNuxtConfig } from 'nuxt/config'
 import { resolve } from 'path'
 
-// nuxt.config.ts
 export default defineNuxtConfig({
   ssr: true,
   nitro: {
     middleware: ['~/server/middleware/cors.ts'],
-    preset: 'node', // ← Vercelの405対策として static → node に変更
+    preset: 'static',
     prerender: {
       crawlLinks: true,
       routes: [
-        '/',             // トップページ
-        '/favorites',    // お気に入りページ
+        '/',
+        '/favorites',
         '/product-details/1',
         '/product-details/2',
         '/product-details/3',
@@ -25,9 +24,9 @@ export default defineNuxtConfig({
         '/product-details/10'
       ]
     }
-  }
+  }, // ✅ ←ここにカンマが必要
 })
-,
+
 
   app: {
     baseURL: '/',
