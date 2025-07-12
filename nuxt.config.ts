@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   ssr: true,
   nitro: {
     middleware: ['~/server/middleware/cors.ts'],
-    preset: 'static',
+    preset: 'node',
     prerender: {
       crawlLinks: true,
       routes: [
