@@ -1,15 +1,15 @@
-// server/api/login.ts
 export default defineEventHandler(async (event) => {
-  // ✅ HTTPメソッドを確認（POST以外は405を返す）
-  if (event.node.req.method !== 'POST') {
-    event.node.res.statusCode = 405
+  // Nuxt3 推奨の method チェック
+  if (event.method !== 'POST') {
+    setResponseStatus(event, 405)
     return { message: 'Method Not Allowed' }
   }
 
-  // ✅ リクエストボディを読み取る
+  // リクエストボディを取得
   const body = await readBody(event)
   const { email, password } = body
 
+  // ダミーログイン処理
   if (email === 'admin@example.com' && password === 'password') {
     return {
       success: true,
@@ -25,5 +25,4 @@ export default defineEventHandler(async (event) => {
     }
   }
 })
-
 
