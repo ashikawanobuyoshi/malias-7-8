@@ -1,4 +1,3 @@
-// nuxt.config.ts
 import { defineNuxtConfig } from 'nuxt/config'
 import { resolve } from 'path'
 
@@ -24,9 +23,7 @@ export default defineNuxtConfig({
         '/product-details/10'
       ]
     }
-  }, // ✅ ←ここにカンマが必要
-})
-
+  },
 
   app: {
     baseURL: '/',
@@ -38,21 +35,19 @@ export default defineNuxtConfig({
     onamaeSmtpPort: process.env.ONAMAE_SMTP_PORT,
     onamaeSmtpUser: process.env.ONAMAE_SMTP_USER,
     onamaeSmtpPass: process.env.ONAMAE_SMTP_PASS,
-
-    // 👇 S3関連（新たに追加）
     awsRegion: process.env.AWS_REGION,
     awsAccessKeyId: process.env.AWS_ACCESS_KEY_ID,
     awsSecretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
     s3BucketName: process.env.S3_BUCKET_NAME
   },
 
-modules: [
-  ['@pinia/nuxt', {
-    autoImports: ['defineStore', 'storeToRefs']
-  }],
-  'pinia-plugin-persistedstate/nuxt', // ✅ これを追加！
-  '@nuxtjs/tailwindcss'
-],
+  modules: [
+    ['@pinia/nuxt', {
+      autoImports: ['defineStore', 'storeToRefs']
+    }],
+    'pinia-plugin-persistedstate/nuxt',
+    '@nuxtjs/tailwindcss'
+  ],
 
   compatibilityDate: '2024-11-01',
 
@@ -87,5 +82,3 @@ modules: [
     '/favorites/**': { prerender: false }
   }
 })
-
-
