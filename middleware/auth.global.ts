@@ -1,16 +1,14 @@
 // middleware/auth.global.ts
-export default defineNuxtRouteMiddleware((to, from) => {
-  const isAuthenticated = useCookie('isAuthenticated')
-  console.log('🔒 middlewareチェック: isAuthenticated.value =', isAuthenticated.value)
-  console.log('🔁 現在のパス:', to.path)
+export default defineNuxtRouteMiddleware((to) => {
+  // APIルート（/api/xxx）にはミドルウェアを適用しない
+  if (to.path.startsWith('/api')) return
 
-  if (!isAuthenticated.value && to.path !== '/login') {
+  const auth = useAuthStore()
+
+  // 未ログインで login ページ以外にアクセスしようとしたらログインにリダイレクト
+  if (!auth.isAuthenticated && to.path !== '/login') {
     return navigateTo('/login')
   }
-
-  // ✅ ログイン済みならログインページへ戻れないようにする
-  if (isAuthenticated.value === 'true' && to.path === '/login') {
-    return navigateTo('/')
-  }
 })
+
 
