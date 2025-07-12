@@ -1,6 +1,7 @@
+// server/api/login.ts
+
 export default defineEventHandler(async (event) => {
   if (event.req.method !== 'POST') {
-    // POST以外のメソッドは拒否する
     event.res.statusCode = 405
     return { message: 'Method Not Allowed' }
   }
