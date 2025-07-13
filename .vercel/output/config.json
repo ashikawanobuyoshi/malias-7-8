@@ -7,17 +7,14 @@
     "product-details/1/index.html": {
       "path": "product-details/1"
     },
-    "product-details/2/index.html": {
-      "path": "product-details/2"
-    },
     "product-details/3/index.html": {
       "path": "product-details/3"
     },
-    "product-details/5/index.html": {
-      "path": "product-details/5"
-    },
     "product-details/4/index.html": {
       "path": "product-details/4"
+    },
+    "product-details/5/index.html": {
+      "path": "product-details/5"
     },
     "product-details/6/index.html": {
       "path": "product-details/6"
@@ -25,14 +22,17 @@
     "product-details/7/index.html": {
       "path": "product-details/7"
     },
-    "product-details/10/index.html": {
-      "path": "product-details/10"
-    },
     "product-details/8/index.html": {
       "path": "product-details/8"
     },
     "product-details/9/index.html": {
       "path": "product-details/9"
+    },
+    "product-details/2/index.html": {
+      "path": "product-details/2"
+    },
+    "product-details/10/index.html": {
+      "path": "product-details/10"
     },
     "admin/index.html": {
       "path": "admin"

@@ -3,27 +3,31 @@ import { resolve } from 'path'
 
 export default defineNuxtConfig({
   ssr: true,
-  nitro: {
-    middleware: ['~/server/middleware/cors.ts'],
-    preset: 'vercel',
-    prerender: {
-      crawlLinks: true,
-      routes: [
-        '/',
-        '/favorites',
-        '/product-details/1',
-        '/product-details/2',
-        '/product-details/3',
-        '/product-details/4',
-        '/product-details/5',
-        '/product-details/6',
-        '/product-details/7',
-        '/product-details/8',
-        '/product-details/9',
-        '/product-details/10'
-      ]
-    }
+nitro: {
+  middleware: ['~/server/middleware/cors.ts'],
+  preset: 'vercel',
+  experimental: {
+    inlineServerFunctions: false
   },
+  prerender: {
+    crawlLinks: true,
+    routes: [
+      '/',
+      '/favorites',
+      '/product-details/1',
+      '/product-details/2',
+      '/product-details/3',
+      '/product-details/4',
+      '/product-details/5',
+      '/product-details/6',
+      '/product-details/7',
+      '/product-details/8',
+      '/product-details/9',
+      '/product-details/10'
+    ],
+    exclude: ['/api/**']
+  }
+},
 
   app: {
     baseURL: '/',
