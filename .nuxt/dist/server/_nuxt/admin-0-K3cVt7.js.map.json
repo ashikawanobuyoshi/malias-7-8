@@ -1,0 +1,1 @@
+{"file":"admin-0-K3cVt7.js","mappings":";;;;;AACO,QAAA,OAAAA,eAAAC,WAAA,EAAA,OAAM,SAAK,MAAA,CAAA,CAAA,oEAAA;;;;;;;;;","names":["_ssrRenderAttrs","_mergeProps"],"sources":["../../../../pages/admin.vue"],"sourcesContent":["<template>\r\n  <div class=\"p-4\">\r\n    <h1 class=\"text-2xl font-bold\">管理者ページ</h1>\r\n    <p>ようこそ、管理者様。</p>\r\n  </div>\r\n</template>\r\n"],"version":3}

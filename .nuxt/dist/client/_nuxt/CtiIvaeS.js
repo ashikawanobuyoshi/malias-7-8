@@ -1,0 +1,1 @@
+import{O as o}from"./C_xtq39S.js";const a=o("favorites",{state:()=>({favoriteImages:[]}),actions:{addFavorite(e){console.log("addFavorite が呼び出されました:",e),this.favoriteImages.push(e)},removeFavorite(e){console.log(`removeFavorite が呼び出されました: index=${e}`),this.favoriteImages.splice(e,1)},setFavoriteImages(e){this.favoriteImages=e}}});export{a as u};
