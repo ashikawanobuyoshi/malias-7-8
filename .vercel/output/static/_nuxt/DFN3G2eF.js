@@ -1,1 +1,0 @@
-import{_ as t}from"./DlAUqK2U.js";import{c as s,a as o,o as n}from"./C_xtq39S.js";const r={},a={class:"p-4"};function c(l,e){return n(),s("div",a,e[0]||(e[0]=[o("h1",{class:"text-2xl font-bold"},"管理者ページ",-1),o("p",null,"ようこそ、管理者様。",-1)]))}const f=t(r,[["render",c]]);export{f as default};
