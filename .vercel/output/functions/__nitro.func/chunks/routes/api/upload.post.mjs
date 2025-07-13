@@ -1,4 +1,4 @@
-import { d as defineEventHandler, a as useRuntimeConfig, r as readBody, b as sendError, c as createError } from '../../_/nitro.mjs';
+import { d as defineEventHandler, a as useRuntimeConfig, r as readBody, c as sendError, e as createError } from '../../_/nitro.mjs';
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 import 'node:http';
 import 'node:https';

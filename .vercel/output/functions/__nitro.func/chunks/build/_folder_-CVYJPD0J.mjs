@@ -1,7 +1,7 @@
 import { defineComponent, withAsyncContext, mergeProps, unref, computed, toValue, reactive, watch, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderList, ssrRenderAttr } from 'vue/server-renderer';
 import { c as useRoute, f as fetchDefaults, b as useRequestFetch } from './server.mjs';
-import { H as hash } from '../_/nitro.mjs';
+import { I as hash } from '../_/nitro.mjs';
 import { isPlainObject } from '@vue/shared';
 import { u as useAsyncData } from './asyncData-p7p-Qn7f.mjs';
 import '../routes/renderer.mjs';
