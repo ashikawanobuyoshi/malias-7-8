@@ -115,4 +115,5 @@ nitro: {
   routeRules: {
     '/favorites/**': { prerender: false }
   }
+Trigger full rebuild
 })
