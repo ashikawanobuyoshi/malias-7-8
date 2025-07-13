@@ -112,8 +112,10 @@ nitro: {
     '@assets/css/print.css'
   ],
 
-  routeRules: {
-    '/favorites/**': { prerender: false }
-  }
-Trigger full rebuild
-})
+routeRules: {
+  '/favorites/**': { prerender: false }
+},
+
+// Trigger full rebuild
+
+}) //
