@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 
 nitro: {
   middleware: ['~/server/middleware/cors.ts'],
-  preset: 'vercel-edge',
+  preset: 'vercel',
   experimental: {
     inlineServerFunctions: false
   },
